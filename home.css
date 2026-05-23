@@ -199,6 +199,13 @@
   grid-template-columns: 1fr;
   max-width: 680px;
 }
+.articles-grid--two {
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+}
+@media (max-width: 600px) {
+  .articles-grid--two { grid-template-columns: 1fr; }
+}
 @media (max-width: 900px) {
   .articles-grid { grid-template-columns: 1fr 1fr; }
 }
