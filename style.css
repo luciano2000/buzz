@@ -614,8 +614,8 @@ a:hover { text-decoration: underline; }
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 2rem;
-    align-items: start;
     padding: 0 1.5rem;
+    /* sem align-items: start — o padrão stretch é necessário para o sticky funcionar */
   }
 
   /* No desktop, o article-wrapper não precisa de max-width próprio */
