@@ -1,0 +1,48 @@
+# netlify.toml — BrasilBuzz
+# Cache agressivo + compressão + headers de segurança
+
+[build]
+  publish = "."
+
+# ===== HEADERS DE PERFORMANCE =====
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Segurança básica
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Compressão via Netlify (ativa brotli/gzip automático)
+    # Content-Encoding é aplicado automaticamente
+
+[[headers]]
+  # CSS e JS: cache longo (1 ano) — altere o nome do arquivo para invalidar
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # HTML: cache curto (5min) — permite updates rápidos de conteúdo
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300, stale-while-revalidate=86400"
+
+[[headers]]
+  # Fontes (se hospedar localmente futuramente)
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+# ===== REDIRECTS =====
+# Garante que /index.html e / sirvam a mesma página
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
