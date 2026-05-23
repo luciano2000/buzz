@@ -576,6 +576,29 @@ a:hover { text-decoration: underline; }
 .footer-nav a:hover { color: #ccc; text-decoration: none; }
 
 /* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.72rem;
+  color: var(--gray-lt);
+}
+.breadcrumb li + li::before {
+  content: '›';
+  color: var(--border);
+  margin-right: 0.4rem;
+}
+.breadcrumb a {
+  color: var(--gray-lt);
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: var(--red); }
+
+/* ============================================================
    CLEARFIX (float ads)
    ============================================================ */
 .article-body::after { content: ''; display: table; clear: both; }
