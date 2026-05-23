@@ -63,7 +63,6 @@
 
   <!-- Paths relativos: ../../ sobe de /saude/slug/ para raiz -->
   <link rel="stylesheet" href="../../style.css">
-  <script async src="https://cdn.jsdelivr.net/gh/luciano2000/jsadtec@main/google-admanager.min.js"></script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -379,26 +378,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      function initAds() {
-        if (typeof GoogleAdManager !== 'undefined') {
-          GoogleAdManager.init({
-            networkCode: '23050256432',
-            adUnitPath: '/brasilbuzz',
-            enableLazyLoad: true,
-            refresh: 30,
-            refreshOnlyVisible: true
-          });
-        }
-      }
-      if (typeof GoogleAdManager !== 'undefined') { initAds(); }
-      else {
-        var s = document.querySelector('script[src*="jsadtec"]');
-        if (s) s.addEventListener('load', initAds);
-      }
-    })();
-  </script>
   <!-- ANCHOR AD: mobile sticky bottom -->
   <div id="anchor-ad" class="anchor-ad" role="complementary" aria-label="Publicidade">
     <button id="anchor-close" class="anchor-close" aria-label="Fechar anúncio">✕ fechar</button>
