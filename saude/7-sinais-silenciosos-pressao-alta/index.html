@@ -95,6 +95,7 @@
 
   <!-- MAIN -->
   <main id="start-of-content" role="main">
+    <div class="page-layout">
     <article class="article-wrapper" itemscope itemtype="https://schema.org/Article">
 
       <div class="article-category" aria-label="Categoria">
@@ -151,8 +152,8 @@
           A Dra. Fernanda Coelho, cardiologista com 22 anos de experiência e pesquisadora do Instituto do Coração (InCor), explica: <em>"O problema é que as pessoas esperam sentir uma 'dor forte'. Mas a hipertensão raramente causa dor. Ela causa sinais sutis que o seu corpo já está enviando — e que você provavelmente está ignorando."</em>
         </p>
 
-        <!-- AD: FLOAT RIGHT -->
-        <div class="ad-container ad-float-right" role="complementary" aria-label="Publicidade">
+        <!-- AD: FLOAT RIGHT — visível só em mobile (sidebar substitui no desktop) -->
+        <div class="ad-container ad-float-right ad-float-mobile" role="complementary" aria-label="Publicidade">
           <div class="pubad" data-pos="meio"></div>
         </div>
 
@@ -309,6 +310,18 @@
 
       </div><!-- /article-body -->
     </article>
+
+    <!-- SIDEBAR DESKTOP — sticky 300x600, CPM premium -->
+    <aside class="article-sidebar" aria-label="Publicidade">
+      <div class="sidebar-sticky">
+        <div class="sidebar-label">Publicidade</div>
+        <div class="ad-container ad-sidebar">
+          <div class="pubad" data-pos="sidebar"></div>
+        </div>
+      </div>
+    </aside>
+
+    </div><!-- /page-layout -->
   </main>
 
   <!-- AD: RODAPÉ -->
