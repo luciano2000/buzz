@@ -51,6 +51,8 @@
     @media(max-width:767px){.ad-top{min-height:60px}}
   </style>
 
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap"
         media="print" onload="this.media='all'">
@@ -309,6 +311,33 @@
         </div>
 
       </div><!-- /article-body -->
+
+      <!-- LEIA TAMBÉM -->
+      <section class="related-articles" aria-labelledby="related-label">
+        <h2 class="related-label" id="related-label">Leia também</h2>
+        <div class="related-grid">
+
+          <a href="/saude/7-sinais-silenciosos-pressao-alta/" class="related-card related-card--active">
+            <span class="related-cat related-cat--saude">⚕️ Saúde</span>
+            <h3 class="related-title">7 Sinais Silenciosos de Pressão Alta que a Maioria das Pessoas Ignora</h3>
+            <span class="related-badge">Você está lendo</span>
+          </a>
+
+          <article class="related-card related-card--coming">
+            <span class="related-cat related-cat--financas">💰 Finanças</span>
+            <h3 class="related-title">5 Erros Financeiros que Impedem Brasileiros de Sair das Dívidas</h3>
+            <span class="related-badge">Em breve</span>
+          </article>
+
+          <article class="related-card related-card--coming">
+            <span class="related-cat related-cat--saude">⚕️ Saúde</span>
+            <h3 class="related-title">Diabetes Tipo 2: Os Sintomas que Aparecem 10 Anos Antes do Diagnóstico</h3>
+            <span class="related-badge">Em breve</span>
+          </article>
+
+        </div>
+      </section>
+
     </article>
 
     <!-- SIDEBAR DESKTOP — sticky 300x600, CPM premium -->
@@ -352,7 +381,7 @@
             networkCode: '23050256432',
             adUnitPath: '/23050256432/brasilbuzz',
             enableLazyLoad: true,
-            refresh: 30,
+            refresh: 45,
             refreshOnlyVisible: true
           });
         }
@@ -364,6 +393,12 @@
       }
     })();
   </script>
+  <!-- ANCHOR AD: mobile sticky bottom -->
+  <div id="anchor-ad" class="anchor-ad" role="complementary" aria-label="Publicidade">
+    <button id="anchor-close" class="anchor-close" aria-label="Fechar anúncio">✕ fechar</button>
+    <div class="pubad" data-pos="anchor"></div>
+  </div>
+
   <script src="../../main.js" defer></script>
 </body>
 </html>

@@ -106,4 +106,17 @@
     });
   }
 
+
+  /* === ANCHOR AD — fechar e remover padding ===
+     Política Google: anchor deve ser dismissível pelo usuário            */
+  var anchorAd = document.getElementById('anchor-ad');
+  var anchorClose = document.getElementById('anchor-close');
+  if (anchorAd && anchorClose) {
+    document.body.classList.add('has-anchor');
+    anchorClose.addEventListener('click', function () {
+      anchorAd.style.display = 'none';
+      document.body.classList.remove('has-anchor');
+    }, { once: true });
+  }
+
 })();

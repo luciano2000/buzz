@@ -115,14 +115,14 @@
           <div class="section-line" aria-hidden="true"></div>
         </div>
 
-        <div class="articles-grid" role="list">
+        <div class="articles-grid articles-grid--single" role="list">
 
           <!-- CARD: Artigo em destaque -->
-          <article class="article-card article-card--featured" role="listitem"
+          <article class="article-card article-card--featured article-card--hero" role="listitem"
                    itemscope itemtype="https://schema.org/Article">
             <div class="card-badge">EM ALTA</div>
             <div class="card-category card-cat--saude">Saúde</div>
-            <h3 class="card-title" itemprop="headline">
+            <h3 class="card-title card-title--hero" itemprop="headline">
               <a href="/saude/7-sinais-silenciosos-pressao-alta/" class="card-link" itemprop="url">
                 7 Sinais Silenciosos de Pressão Alta que a Maioria das Pessoas Ignora
               </a>
@@ -134,31 +134,9 @@
               <time datetime="2026-05-23" itemprop="datePublished">23 mai 2026</time>
               <span class="card-read">8 min</span>
             </div>
-          </article>
-
-          <!-- PLACEHOLDER: próximas matérias -->
-          <article class="article-card article-card--coming" role="listitem" aria-label="Em breve">
-            <div class="card-category card-cat--financas">Finanças</div>
-            <div class="card-coming-label">Em breve</div>
-            <h3 class="card-title card-title--muted">
-              Especialistas revelam os 5 erros financeiros que impedem brasileiros de sair das dívidas
-            </h3>
-          </article>
-
-          <article class="article-card article-card--coming" role="listitem" aria-label="Em breve">
-            <div class="card-category card-cat--saude">Saúde</div>
-            <div class="card-coming-label">Em breve</div>
-            <h3 class="card-title card-title--muted">
-              Diabetes tipo 2: os sintomas que aparecem 10 anos antes do diagnóstico
-            </h3>
-          </article>
-
-          <article class="article-card article-card--coming" role="listitem" aria-label="Em breve">
-            <div class="card-category card-cat--bem-estar">Bem-estar</div>
-            <div class="card-coming-label">Em breve</div>
-            <h3 class="card-title card-title--muted">
-              Sono e longevidade: o que a ciência descobriu sobre quem vive mais
-            </h3>
+            <a href="/saude/7-sinais-silenciosos-pressao-alta/" class="card-read-btn" aria-label="Ler artigo completo">
+              Ler artigo →
+            </a>
           </article>
 
         </div>
@@ -225,7 +203,7 @@
             networkCode: '23050256432',
             adUnitPath: '/23050256432/brasilbuzz',
             enableLazyLoad: true,
-            refresh: 30,
+            refresh: 45,
             refreshOnlyVisible: true
           });
         }
@@ -237,6 +215,12 @@
       }
     })();
   </script>
+  <!-- ANCHOR AD: mobile sticky bottom -->
+  <div id="anchor-ad" class="anchor-ad" role="complementary" aria-label="Publicidade">
+    <button id="anchor-close" class="anchor-close" aria-label="Fechar anúncio">✕ fechar</button>
+    <div class="pubad" data-pos="anchor"></div>
+  </div>
+
   <script src="main.js" defer></script>
 </body>
 </html>

@@ -602,14 +602,14 @@ a:hover { text-decoration: underline; }
    SIDEBAR LAYOUT — Desktop only, CSS puro, zero JS
    ============================================================ */
 
-/* Grid: [artigo] [sidebar] — só ativo acima de 1080px */
+/* Grid: [artigo] [sidebar] — só ativo acima de 960px */
 .page-layout {
   display: block; /* mobile: bloco simples */
   max-width: 1100px;
   margin: 0 auto;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 960px) {
   .page-layout {
     display: grid;
     grid-template-columns: 1fr 320px;
@@ -636,7 +636,7 @@ a:hover { text-decoration: underline; }
   display: none; /* esconde em mobile */
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 960px) {
   .article-sidebar {
     display: block;
   }
@@ -678,6 +678,120 @@ a:hover { text-decoration: underline; }
 
 
 .article-body::after { content: ''; display: table; clear: both; }
+
+/* ============================================================
+   RELATED ARTICLES — "Leia também"
+   ============================================================ */
+.related-articles {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--black);
+}
+.related-label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 1.25rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 1rem;
+}
+.related-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--black);
+  padding: 1.1rem;
+  text-decoration: none;
+  display: block;
+  border-radius: 0 0 2px 2px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+.related-card--active { border-top-color: var(--red); }
+.related-card--coming { opacity: 0.6; cursor: default; }
+.related-card--coming:hover { transform: none; box-shadow: none; }
+.related-cat {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.related-cat--saude   { color: var(--red); }
+.related-cat--financas { color: #1a6e3c; }
+.related-cat--bem-estar { color: #7d5a1e; }
+.related-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--black);
+  margin: 0;
+}
+.related-badge {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-lt);
+  display: block;
+  margin-top: 0.6rem;
+}
+
+/* ============================================================
+   ANCHOR AD — mobile sticky bottom
+   ============================================================ */
+.anchor-ad {
+  display: none; /* desktop: nunca aparece */
+}
+
+@media (max-width: 767px) {
+  .anchor-ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Espaço para o conteúdo não ficar atrás do anchor */
+  body.has-anchor { padding-bottom: 58px; }
+}
+
+.anchor-close {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  background: rgba(26,26,26,0.72);
+  color: #fff;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  padding: 3px 10px;
+  font-size: 0.62rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.anchor-close:hover { background: rgba(26,26,26,0.9); }
 
 /* ============================================================
    ACESSIBILIDADE
